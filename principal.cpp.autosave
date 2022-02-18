@@ -16,6 +16,7 @@ principal::principal(QWidget *parent)
     ui->outDetalle->setHorizontalHeaderLabels(cabecera);
     agregar i;
     imprimirtareas=i.m_tareas;
+    int i=ui->outDetalle.ind
     int fila=ui->outDetalle->rowCount();
         ui->outDetalle->insertRow(fila);
         //ui->outDetalle->setItem(fila,0,new QTableWidgetItem(QString::number(imprimirtareas.at(0)->numero())));

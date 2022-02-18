@@ -9,16 +9,27 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    acerca.cpp \
+    agregar.cpp \
     main.cpp \
-    principal.cpp
+    principal.cpp \
+    tarea.cpp
 
 HEADERS += \
-    principal.h
+    acerca.h \
+    agregar.h \
+    principal.h \
+    tarea.h
 
 FORMS += \
+    acerca.ui \
+    agregar.ui \
     principal.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    Recursos.qrc
