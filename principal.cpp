@@ -31,7 +31,7 @@ void principal::on_actionAGREGAR_TAREA_triggered()
     int res,numero,fila;
     agregart pd(this);
     pd.setWindowTitle("captura de tarea");
-    pd.exec();
+    res = pd.exec();
     if(res == QDialog::Rejected)
         return;
     numero= pd.numero();
@@ -41,9 +41,9 @@ void principal::on_actionAGREGAR_TAREA_triggered()
     ui->outDetalle->insertRow(ui->outDetalle->rowCount());
     fila=ui->outDetalle->rowCount() - 1;
     ui->outDetalle->setItem(fila, numero, new QTableWidgetItem(numero));
-    /* ui->outDetalle->setItem(fila, nombre, new QTableWidgetItem(QString::(nombre)));
-       ui->outDetalle->setItem(fila, fecha, new QTableWidgetItem(fecha));*/
-    // ui->outDetalle->setItem(fila, tipo, new QTableWidgetItem(tipo));
+    /*ui->outDetalle->setItem(fila, nombre, new QTableWidgetItem(QString::text(NOMBRE)));
+    ui->outDetalle->setItem(fila, fecha, new QTableWidgetItem(QString::number(FECHA)));
+    ui->outDetalle->setItem(fila, tipo, new QTableWidgetItem(QString::number(TIPO)));*/
 }
 
 void principal::on_actionSALIR_triggered()

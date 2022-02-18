@@ -32,7 +32,7 @@ private:
     Ui::principal *ui;
     QString m_detalles;
     enum Columna{
-        numero, nombre, tipo,fecha
+        NUMERO, NOMBRE, TIPO,FECHA
     };
 
     void setText();
