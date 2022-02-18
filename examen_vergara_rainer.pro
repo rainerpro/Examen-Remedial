@@ -25,6 +25,8 @@ FORMS += \
     acerca.ui \
     agregart.ui \
     principal.ui
+TRANSLATIONS
+portuges.ts
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
