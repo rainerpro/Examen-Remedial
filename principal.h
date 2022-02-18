@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include "acerca.h"
 #include "tarea.h"
-#include "agregar.h"
+#include "agregart.h"
 
 #define Examen "1.0"
 
@@ -26,8 +26,15 @@ private slots:
 
     void on_actionAGREGAR_TAREA_triggered();
 
+    void on_actionELIMINAR_triggered();
+
 private:
     Ui::principal *ui;
     QString m_detalles;
+    enum Columna{
+        numero, nombre, tipo,fecha
+    };
+
+    void setText();
 };
 #endif // PRINCIPAL_H

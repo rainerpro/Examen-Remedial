@@ -1,6 +1,6 @@
 #include "principal.h"
 #include "ui_principal.h"
-#include "agregar.h"
+#include "agregart.h"
 #include "tarea.h"
 #include <QDebug>
 
@@ -10,23 +10,40 @@ principal::principal(QWidget *parent)
     , ui(new Ui::principal)
 {
     ui->setupUi(this);
+    setWindowTitle("AGREGAR TAREA");
     // Configurar cabecera de la tabla
     QStringList cabecera = {"NUMERO", "NOMBRE", "TIPO", "FECHA"};
     ui->outDetalle->setColumnCount(4);
     ui->outDetalle->setHorizontalHeaderLabels(cabecera);
-    agregar i;
+    /*  agregar i;
     imprimirtareas=i.m_tareas;
-    int fila=ui->outDetalle->rowCount();
-        ui->outDetalle->insertRow(fila);
-        //ui->outDetalle->setItem(fila,0,new QTableWidgetItem(QString::number(imprimirtareas.at(0)->numero())));
-        /*ui->outDetalle->setItem(fila,1,new QTableWidgetItem(l->nombre(nombre)));
-        ui->outDetalle->setItem(fila,2,new QTableWidgetItem(QString::number(l->precio(),'f',2)));
-        ui->outDetalle->setItem(fila,3,new QTableWidgetItem(QString::number(subtotal,'f',2)));*/
+   // setText();*/
+
 }
 
 principal::~principal()
 {
     delete ui;
+}
+void principal::on_actionAGREGAR_TAREA_triggered()
+{
+    QString nombre, tipo,fecha;
+    int res,numero,fila;
+    agregart pd(this);
+    pd.setWindowTitle("captura de tarea");
+    pd.exec();
+    if(res == QDialog::Rejected)
+        return;
+    numero= pd.numero();
+    nombre = pd.nombre();
+    tipo = pd.tipo();
+    fecha = pd.fecha();
+    ui->outDetalle->insertRow(ui->outDetalle->rowCount());
+    fila=ui->outDetalle->rowCount() - 1;
+    ui->outDetalle->setItem(fila, numero, new QTableWidgetItem(numero));
+    /* ui->outDetalle->setItem(fila, nombre, new QTableWidgetItem(QString::(nombre)));
+       ui->outDetalle->setItem(fila, fecha, new QTableWidgetItem(fecha));*/
+    // ui->outDetalle->setItem(fila, tipo, new QTableWidgetItem(tipo));
 }
 
 void principal::on_actionSALIR_triggered()
@@ -48,10 +65,12 @@ void principal::on_actionACERCA_DE_triggered()
 }
 
 
-void principal::on_actionAGREGAR_TAREA_triggered()
+
+
+
+void principal::on_actionELIMINAR_triggered()
 {
-agregar *pantalla = new agregar(this);
-pantalla->setWindowModality(Qt::ApplicationModal);
-pantalla->show();
+
 }
+
 

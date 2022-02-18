@@ -65,6 +65,7 @@
      <string>ARCHIVO</string>
     </property>
     <addaction name="actionCALENDARIO"/>
+    <addaction name="actionELIMINAR"/>
     <addaction name="actionAGREGAR_TAREA"/>
     <addaction name="actionFINALIZAR_TAREA"/>
     <addaction name="actionSALIR"/>
@@ -93,11 +94,10 @@
    <addaction name="separator"/>
    <addaction name="actionFINALIZAR_TAREA"/>
    <addaction name="separator"/>
-   <addaction name="actionCALENDARIO"/>
-   <addaction name="separator"/>
    <addaction name="actionSALIR"/>
    <addaction name="separator"/>
    <addaction name="actionACERCA_DE"/>
+   <addaction name="separator"/>
   </widget>
   <action name="actionAGREGAR_TAREA">
    <property name="icon">
@@ -157,6 +157,11 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionELIMINAR">
+   <property name="text">
+    <string>ELIMINAR</string>
    </property>
   </action>
  </widget>

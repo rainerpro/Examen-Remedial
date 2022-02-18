@@ -10,20 +10,20 @@ CONFIG += c++11
 
 SOURCES += \
     acerca.cpp \
-    agregar.cpp \
+    agregart.cpp \
     main.cpp \
     principal.cpp \
     tarea.cpp
 
 HEADERS += \
     acerca.h \
-    agregar.h \
+    agregart.h \
     principal.h \
     tarea.h
 
 FORMS += \
     acerca.ui \
-    agregar.ui \
+    agregart.ui \
     principal.ui
 
 # Default rules for deployment.
