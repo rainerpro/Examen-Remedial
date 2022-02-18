@@ -1,7 +1,7 @@
 #include "principal.h"
 #include "ui_principal.h"
 #include "agregart.h"
-#include "tarea.h"
+//#include "tarea.h"
 #include <QDebug>
 
 

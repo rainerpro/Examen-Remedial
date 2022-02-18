@@ -6,6 +6,8 @@ agregart::agregart(QWidget *parent) :
     ui(new Ui::agregart)
 {
     ui->setupUi(this);
+    ui->inTipo->addItem("Colegio");
+    ui->inTipo->addItem("Universidad");
 }
 
 agregart::~agregart()
